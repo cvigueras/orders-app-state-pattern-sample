@@ -1,8 +1,8 @@
-﻿namespace Orders.State.Pattern.App.Models
+﻿namespace Orders.State.Pattern.App.DocumentModel
 {
     public class Document
     {
-        public State _state;
+        private DocumentStates.State _state;
         public Header Header { get; set; }
         public Lines Lines { get; set; }
         public DateTime? ProceessedTime { get; set; }
@@ -10,7 +10,7 @@
         public Tipo Tipo { get; set; }
 
 
-        public void TransitionTo(State state)
+        public void TransitionTo(DocumentStates.State state)
         {
             _state = state;
             _state.SetContext(this);

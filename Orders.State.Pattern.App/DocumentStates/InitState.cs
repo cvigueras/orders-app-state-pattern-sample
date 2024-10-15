@@ -1,4 +1,4 @@
-﻿using Orders.State.Pattern.App.Models;
+﻿using Orders.State.Pattern.App.DocumentModel;
 
 namespace Orders.State.Pattern.App.DocumentStates
 {

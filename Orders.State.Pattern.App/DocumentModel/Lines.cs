@@ -1,4 +1,4 @@
-﻿namespace Orders.State.Pattern.App.Models;
+﻿namespace Orders.State.Pattern.App.DocumentModel;
 
 public class Lines
 {

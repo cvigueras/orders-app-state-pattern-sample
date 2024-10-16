@@ -2,9 +2,23 @@
 
 public class Line
 {
-    public string NumeroPedido { get; set; }
-    public int Ejercicio { get; set; }
-    public string NumeroLinea { get; set; }
-    public string Marca { get; set; }
-    public int Price { get; set; }
+    public Guid DocumentNumber { get; }
+    public int Exercise { get;}
+    public int LineNumber { get; }
+    public string Mark { get; }
+    public double Price { get; }
+
+    private Line(Guid documentNumber, int exercise, int lineNumber, string mark, double price)
+    {
+        DocumentNumber = documentNumber;
+        Exercise = exercise;
+        LineNumber = lineNumber;
+        Mark = mark;
+        Price = price;
+    }
+
+    public static Line Create(Guid documentNumber, int exercise, int lineNumber, string mark, double price)
+    {
+        return new Line(documentNumber, exercise, lineNumber, mark, price);
+    }
 }

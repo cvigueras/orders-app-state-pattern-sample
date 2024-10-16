@@ -2,7 +2,7 @@
 
 public class Lines
 {
-    public IEnumerable<Line> Values { get; set; }
+    public List<Line> Values { get; set; } = new List<Line>();
 
     public bool HasZeroPrices()
     {

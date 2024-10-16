@@ -2,7 +2,7 @@
 
 public enum Tipo
 {
-    Pedido = 0,
+    Default = 0,
     Factura_Proveedor = 1,
     Factura_Cliente = 2,
 

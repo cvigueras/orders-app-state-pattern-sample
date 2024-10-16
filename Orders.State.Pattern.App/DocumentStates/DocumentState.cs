@@ -2,7 +2,7 @@
 
 namespace Orders.State.Pattern.App.DocumentStates
 {
-    public abstract class State
+    public abstract class DocumentState
     {
         protected Document Document;
 
@@ -11,6 +11,7 @@ namespace Orders.State.Pattern.App.DocumentStates
             Document = document;
         }
 
-        public abstract void ProcessDocument();
+        public abstract void Process();
+        public abstract string GetState();
     }
 }

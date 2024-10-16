@@ -4,7 +4,7 @@ public class ProcessedDocumentState : DocumentState
 {
     public override void Process()
     {
-        if (Document.ProcessedTime.HasValue)
+        if (Document!.ProcessedTime.HasValue)
         {
             Document.TransitionTo(new ClosedDocumentState());
         }

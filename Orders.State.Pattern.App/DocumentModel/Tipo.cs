@@ -3,7 +3,7 @@
 public enum Tipo
 {
     Default = 0,
-    Factura_Proveedor = 1,
-    Factura_Cliente = 2,
+    FacturaProveedor = 1,
+    FacturaCliente = 2,
 
 }

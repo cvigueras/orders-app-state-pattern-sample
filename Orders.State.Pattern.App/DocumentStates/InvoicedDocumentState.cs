@@ -4,7 +4,7 @@ public class InvoicedDocumentState : DocumentState
 {
     public override void Process()
     {
-        if (!Document.Lines!.HasZeroPrices())
+        if (!Document!.Lines!.HasZeroPrices())
         {
             Document.TransitionTo(new ProcessedDocumentState());
         }

@@ -4,7 +4,7 @@ public class InvoicedClientsDocumentState : DocumentState
 {
     public override void Process()
     {
-        Document.ProcessedTime = DateTime.Now;
+        Document!.ProcessedTime = DateTime.Now;
         Document.TransitionTo(new ProcessedDocumentState());
     }
 

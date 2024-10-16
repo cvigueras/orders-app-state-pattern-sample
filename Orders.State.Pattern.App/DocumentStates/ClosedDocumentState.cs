@@ -4,7 +4,7 @@ public class ClosedDocumentState : DocumentState
 {
     public override void Process()
     {
-        Document.CloseDocument();
+        Document!.CloseDocument();
         Console.WriteLine("The document has been closed.");
     }
 

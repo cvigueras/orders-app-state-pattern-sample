@@ -35,8 +35,8 @@ namespace Orders.State.Pattern.App.DocumentModel
         {
             Type = state switch
             {
-                ConfirmedDocumentState => Tipo.Factura_Proveedor,
-                SentDocumentState => Tipo.Factura_Cliente,
+                ConfirmedDocumentState => Tipo.FacturaProveedor,
+                SentDocumentState => Tipo.FacturaCliente,
                 _ => Type
             };
             _state = state;
@@ -53,6 +53,6 @@ namespace Orders.State.Pattern.App.DocumentModel
             Closed = true;
         }
 
-        public string? GetState() => _state.GetState();
+        public string GetState() => _state.GetState();
     }
 }

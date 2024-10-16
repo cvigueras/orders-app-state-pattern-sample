@@ -4,7 +4,7 @@ public class ConfirmedDocumentState : DocumentState
 {
     public override void Process()
     {
-        Document.TransitionTo(new InvoicedDocumentState());
+        Document!.TransitionTo(new InvoicedDocumentState());
     }
 
     public override string GetState()

@@ -2,14 +2,9 @@
 
 namespace Orders.State.Pattern.App.DocumentStates
 {
-    public abstract class DocumentState
+    public abstract class DocumentState(Document? document)
     {
-        protected Document? Document;
-
-        public void SetContext(Document? document)
-        {
-            Document = document;
-        }
+        protected Document? Document = document;
 
         public abstract void Process();
         public abstract string GetState();

@@ -1,7 +1,13 @@
-﻿namespace Orders.State.Pattern.App.DocumentStates;
+﻿using Orders.State.Pattern.App.DocumentModel;
+
+namespace Orders.State.Pattern.App.DocumentStates;
 
 public class ClosedDocumentState : DocumentState
 {
+    public ClosedDocumentState(Document document) : base(document)
+    {
+        Document = document;
+    }
     public override void Process()
     {
         Document!.CloseDocument();

@@ -17,8 +17,7 @@ namespace Orders.State.Pattern.App.DocumentModel
             Number = Guid.NewGuid();
             Header = header;
             Lines = new Lines();
-            _state = new InitDocumentState();
-            _state.SetContext(this);
+            _state = new InitDocumentState(this);
         }
 
         public static Document Create(Header header)
@@ -40,7 +39,6 @@ namespace Orders.State.Pattern.App.DocumentModel
                 _ => Type
             };
             _state = state;
-            _state.SetContext(this);
         }
 
         public void ProcessDocument()

@@ -41,12 +41,12 @@ namespace Orders.State.Pattern.App.DocumentModel
             _state = state;
         }
 
-        public void ProcessDocument()
+        public void Process()
         {
             _state.Process();
         }
 
-        public void CloseDocument()
+        public void Close()
         {
             Closed = true;
         }
